@@ -8,25 +8,51 @@
     tools:ignore="HardcodedText">
 
     <!--Button to open the image selector-->
+
+    <!--ImageView to preview the selected image-->
+
     <Button
         android:id="@+id/BSelectImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="16dp"
 
         android:text="SELECT IMAGE"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
 
-    <!--ImageView to preview the selected image-->
-    <ImageView
-        android:id="@+id/IVPreviewImage"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_below="@id/BSelectImage"
+    <Button
+        android:id="@+id/CropButton"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="16dp"
+        android:text="Crop"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="AutoCropper"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/NoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="20dp"
+        android:text="balls"
+        android:textSize="20sp" />
 
 </RelativeLayout>
