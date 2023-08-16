@@ -11,6 +11,20 @@
 
     <!--ImageView to preview the selected image-->
 
+    <ImageButton
+
+        android:id="@+id/iageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/Title"
+        android:layout_alignEnd="@+id/Title"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="-31dp"
+        android:layout_marginEnd="-92dp"
+        android:layout_marginBottom="100dp"
+        android:contentDescription="A tiny Android icon"
+        android:src="@drawable/common_google_signin_btn_icon_dark" />
+
     <Button
         android:id="@+id/BSelectImage"
         android:layout_width="wrap_content"

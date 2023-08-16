@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_popup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7d000000"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#D5D5D5"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/layout_popup_txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="30dp"
+            android:text="Buy Premium" />
+        <TextView
+            android:id="@+id/layout_popup_txtMessage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:text="Get access to Unlimited Crops, with no ads" />
+
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/layout_popup_butOne"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="5dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:text="Buy" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
