@@ -19,33 +19,29 @@ def bin_img(image):
 
 def Get_Bottom_Y(image, EncString):
 
-    #im2 = cv2.imread(image)
-    im2 = image
 
+    im2 = image
+    h = int(im2.shape[0])
+    w = int(im2.shape[1])
 
     im3 = decoder(EncString)
 
-    print(im3.shape[0])
-    if int(im2.shape[0]) == 1520:
-
+    if w == 720:
         x = 100
-        Range = 900
-        
-    elif int(im2.shape[0]) == 1920:
+        if h == 1520:
 
+            Range = 900
+        elif h == 1640:
+
+            Range = 900
+    elif w == 1080:
         x = 160
-        Range = 1060
-    elif int(im2.shape[0]) == 1280:
+        if h == 1920:
 
-        x = 92
-        Range = 700
-    elif int(im2.shape[0]) == 1640:
+            Range = 1060
+        elif h == 2000:
 
-        x = 100
-        Range = 900
-
-
-
+            Range = 1080
 
     ROI = im3[:,:]
 
