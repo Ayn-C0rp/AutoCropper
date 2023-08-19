@@ -82,7 +82,7 @@ def Get_Bottom_Y(image, EncString):
     return lowesty, im3
 
 
-def get_top_y(image, boty):
+def get_top_y(image, boty, Comic):
     #im = cv2.imread(image)
     im = image
     if int(im.shape[0]) == 1520:
@@ -96,7 +96,11 @@ def get_top_y(image, boty):
         Line_Thresh = 972
     elif int(im.shape[0]) == 1280:
         Bump = 200
-        Line_Thresh = 504  
+        Line_Thresh = 504
+
+    if Comic:
+        Bump + 400
+
     cap = bin_img(im)
     laplacian = cv2.Laplacian(cap,cv2.CV_64F)
     cv2.imwrite('laplacian.jpg', laplacian)
@@ -130,13 +134,13 @@ def encoder(image):
     return  encoded_data
 
 
-def crop(image, Encoded, name):
+def crop(image, Encoded, name, Comic):
 
     Im = decoder(image)
 
     bot_y, ROI = Get_Bottom_Y(Im, Encoded)
 
-    top_y = get_top_y(Im, bot_y)
+    top_y = get_top_y(Im, bot_y, Comic)
 
     crop = Im[top_y:bot_y, :]
 
